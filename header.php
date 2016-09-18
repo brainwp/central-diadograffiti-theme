@@ -33,11 +33,11 @@
 
 				<div class="header-image">
 					<?php
-					$header_image = get_header_image();
-					if ( ! empty( $header_image ) ) :
+					$logo = get_theme_mod( 'logo' );
+					if ( ! empty( $logo ) ) :
 					?>
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-							<img src="<?php echo esc_url( $header_image ); ?>" height="<?php esc_attr_e( $header_image->height ); ?>" width="<?php esc_attr_e( $header_image->width ); ?>" alt="<?php echo bloginfo( 'name' ); ?>" />
+							<img src="<?php echo esc_url( $logo ); ?>" alt="<?php echo bloginfo( 'name' ); ?>" />
 						</a>
 					<?php endif; ?>
 				</div><!-- .header-image -->
@@ -79,4 +79,3 @@
 	</header><!-- #header -->
 
 	<div id="wrapper" class="container">
-		<div class="row">

@@ -12,6 +12,11 @@ Author URI: http://wpod.in/#colaboradores
 
 
 /* Geral */
+body {
+	background: url( '../images/bg-home.jpg' ) center top fixed;
+	font-family: 'Source Sans Pro', sans-serif;
+	margin-top: 110px;
+}
 .nopadding {
 	padding: 0;
 }
@@ -166,4 +171,68 @@ nav.internal-menu .navbar-nav {
 	.navbar-default .navbar-brand {
 		display: none !important;
 	}
+}
+
+/* Home */
+body.home .desc {
+	text-align: center;
+}
+body.home .desc h1 {
+	font-size: 4em;
+	font-weight: 300;
+}
+body.home .desc span {
+	font-size: 1.3em;
+	font-weight: 400;
+}
+
+/* Slider */
+body.home .slider {
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+body.home .slider .col-md-12 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/* Loop Acervo Digital */
+.loop-acervo {
+	text-align: center;
+}
+.loop-acervo h1 {
+	font-size: 4em;
+	font-weight: 300;
+}
+.loop-acervo .thumb {
+	background: url( '../images/zoom.png' ) center center no-repeat #000;
+	overflow: hidden;
+	position: relative;
+}
+.loop-acervo .thumb img {
+	height: auto;
+	max-width: 100%;
+	transition: all 200ms ease-in-out;
+}
+.loop-acervo .thumb .desc {
+	background-color: rgba( 0, 0, 0, 0.5);
+	bottom: -50%;
+	color: #FFF;
+	font-size: 2em;
+	font-weight: 300;
+	text-align: center;
+	transition: all 200ms ease-in-out;
+	padding: 20px;
+	position: absolute;
+	width: 100%;
+	z-index: 99;
+}
+.loop-acervo .thumb:hover .desc {
+	bottom: 0;
+}
+.loop-acervo .thumb:hover img {
+	opacity: 0.5;
+	-ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari */
+    transform: scale(1.2);
 }
