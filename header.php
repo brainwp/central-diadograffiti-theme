@@ -29,8 +29,8 @@
 
 	<header id="header" role="banner">
 		<div class="container-menu" id="header-size">
-			<div class="container">
 
+			<div class="container">
 				<div class="header-image">
 					<?php
 					$logo = get_theme_mod( 'logo' );
