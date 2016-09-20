@@ -34,6 +34,24 @@ get_header(); ?>
 	<div class="col-sm-12 loop-acervo">
 		<h1><?php _e( 'Acervo Digital', 'odin' ); ?></h1>
 
+		<?php
+		// WP_Site_Query arguments
+		$args = array (
+			'order'             => 'DESC',
+			'orderby'           => 'path',
+		);
+
+		// The Site Query
+		$site_query = new WP_Site_Query( $args );
+
+		// The Loop
+		if ( $site_query ) {
+			foreach ( $site_query as $site ) {
+				var_dump( $site ) . "<br />";
+			}
+		}
+		?>
+
 		<a href="">
 			<div class="col-sm-3 nopadding thumb">
 				<div class="desc">2016</div><!-- desc -->
