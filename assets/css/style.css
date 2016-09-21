@@ -240,6 +240,46 @@ body.home .slider .col-md-12 {
     -webkit-transform: scale(1.2); /* Safari */
     transform: scale(1.2);
 }
+
+/* Footer */
+#footer{
+	background:url( '../images/bg-footer.jpg' ) top center no-repeat;
+	background-size:cover;
+	bottom: 0;
+	position: relative;
+	z-index: -14;
+	width: 100%;
+	padding-top:20px;
+	padding-bottom:60px;
+}
+#footer *{
+	font-family: 'Source Sans Pro', sans-serif;
+	transition: all 200ms ease-in-out;
+}
+#footer .pull-left {
+	margin-top: 50px;
+}
+#footer .logos {
+	background: url( '../images/regua-logos-2016.png' ) center center no-repeat;
+	background-size: 100%;
+	height: 150px;
+	overflow: hidden;
+	position: relative;
+}
+#footer .logos a {
+	height: 100%;
+	overflow: hidden;
+    position: absolute;
+}
+#footer .logos a.ae {
+    left: 300px;
+    width: 150px;
+}
+#footer .logos a.brasa {
+    left: 451px;
+    width: 130px;
+}
+
 @media all and ( max-width: 768px ) {
 	.loop-acervo .thumb {
 		background: transparent;
