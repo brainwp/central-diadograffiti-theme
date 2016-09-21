@@ -14,7 +14,22 @@
 
 	<footer id="footer" role="contentinfo">
 		<div class="container">
-			<p>&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> - <?php _e( 'All rights reserved', 'odin' ); ?> | <?php echo sprintf( __( 'Powered by the <a href="%s" rel="nofollow" target="_blank">Odin</a> forces and <a href="%s" rel="nofollow" target="_blank">WordPress</a>.', 'odin' ), 'http://wpod.in/', 'http://wordpress.org/' ); ?></p>
+			<div class="row">
+				<div class="col-sm-4 pull-left">
+					<div class="col-sm-12">
+						<?php _e( 'Alguns direitos reservados', 'odin' ); ?>
+						<img src="<?php bloginfo('template_url');?>/assets/images/cc-icon.png">
+					</div><!-- .col-sm-12 -->
+					<div class="col-sm-12">
+						<?php _e( 'Desenvolvido com', 'odin' ); ?>
+						<img src="<?php esc_url( bloginfo( 'template_url' ) ); ?>/assets/images/wp-icon.png">
+					</div><!-- .col-sm-12 -->
+				</div><!-- .col-sm-4 -->
+				<div class="col-sm-8 pull-right logos">
+					<a href="http://www.acaoeducativa.org.br/" class="ae" target="_blank"></a>
+					<a href="http://www.brasa.art.br" class="brasa" target="_blank"></a>
+				</div><!-- .col-sm-8 pull-right -->
+			</div><!-- .row -->
 		</div><!-- .container -->
 	</footer><!-- #footer -->
 
