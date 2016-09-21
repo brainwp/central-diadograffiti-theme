@@ -94,8 +94,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 			'default-image' => '',
 			'uploads'       => true,
 		);
-
-		add_theme_support( 'custom-header', $default );
+		//add_theme_support( 'custom-header', $default );
 
 		/**
 		 * Support Custom Background.
@@ -104,8 +103,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 			'default-color' => '',
 			'default-image' => '',
 		);
-
-		add_theme_support( 'custom-background', $defaults );
+		//add_theme_support( 'custom-background', $defaults );
 
 		/**
 		 * Support Custom Editor Style.

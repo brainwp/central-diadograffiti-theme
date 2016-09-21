@@ -59,19 +59,6 @@ body.logged-in #header {
 	background: transparent;
 	color: #FFF;
 }
-#header .featured-btn {
-	color: #FFF;
-    float: right;
-    padding: 25px;
-    position: absolute;
-    height: 70px;
-    right: 20px;
-    transition: all 200ms ease-in-out;
-}
-#header .featured-btn:hover {
-    background: #ea7a06;
-    text-decoration: none;
-}
 #header .header-image {
 	position: absolute;
     top: 3px;
@@ -85,6 +72,20 @@ body.logged-in #header {
 }
 .home #header .header-image img {
 	max-width: 220px;
+}
+#header .featured-btn {
+	background-color: #ea7a06;
+	color: #FFF;
+    float: right;
+    height: 70px;
+    padding: 25px;
+    position: absolute;
+    right: 20px;
+    transition: all 200ms ease-in-out;
+}
+#header .featured-btn:hover {
+    background: #CF6A05;
+    text-decoration: none;
 }
 /* Menu Nav */
 nav#menu-top{

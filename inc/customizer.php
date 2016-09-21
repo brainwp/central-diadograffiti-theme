@@ -36,6 +36,22 @@ function brasa_kirki_fields( $fields ) {
 		'priority' => 1,
 	);
 	$fields[] = array(
+		'type'     => 'text',
+		'setting'  => 'featured_btn_txt',
+		'label'    => __( 'Texto do botão em destaque no menu', 'odin' ),
+		'section'  => 'visual',
+		'default'  => '',
+		'priority' => 1,
+	);
+	$fields[] = array(
+		'type'     => 'text',
+		'setting'  => 'featured_btn_link',
+		'label'    => __( 'Link do botão em destaque no menu', 'odin' ),
+		'section'  => 'visual',
+		'default'  => '',
+		'priority' => 1,
+	);
+	$fields[] = array(
 		'type'     => 'textarea',
 		'setting'  => 'desc',
 		'label'    => __( 'Description Site', 'odin' ),
