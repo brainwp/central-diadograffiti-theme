@@ -20,7 +20,7 @@ get_header(); ?>
 			<?php if ( $desc = get_theme_mod( 'desc' ) ): ?>
 				<span><?php echo $desc; ?></span>
 			<?php endif ?>
-		</div><!-- desc -->	
+		</div><!-- desc -->
 	</main><!-- #content -->
 </div><!-- .container -->
 
@@ -45,62 +45,33 @@ get_header(); ?>
 		$site_query = new WP_Site_Query( $args );
 
 		// The Loop
-		if ( $site_query ) {
-			foreach ( $site_query as $site ) {
-				var_dump( $site ) . "<br />";
-			}
-		}
+		if ( $site_query ) :
+			$current_site = get_current_blog_id();
+			foreach ( $site_query->get_sites() as $site ) :
+				if ( $site->blog_id == $current_site ) {
+					continue;
+				}
+				$desc = $site->path;
+				$desc = substr_replace( $desc, '', -1 );
+				$desc = explode( '/', $desc );
+				$desc = end( $desc );
+				switch_to_blog( $site->blog_id );
+				$image = get_theme_mod( 'home_site_image_mu', false );
+				if ( ! $image ) {
+					continue;
+				}
+				?>
+				<a href="<?php echo get_home_url();?>">
+					<div class="col-sm-3 nopadding thumb">
+						<div class="desc">
+							<?php echo $desc;?>
+						</div><!-- desc -->
+						<img src="<?php echo $image;?>" alt="<?php get_bloginfo( 'name' );?>">
+					</div><!-- thumb -->
+				</a>
+			<?php endforeach; restore_current_blog();
+		endif;
 		?>
-
-		<a href="">
-			<div class="col-sm-3 nopadding thumb">
-				<div class="desc">2016</div><!-- desc -->
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp-thumb.jpg" alt="">
-			</div><!-- thumb -->
-		</a>
-		<a href="">
-			<div class="col-sm-3 nopadding thumb">
-				<div class="desc">2015</div><!-- desc -->
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp-thumb.jpg" alt="">
-			</div><!-- thumb -->
-		</a>
-		<a href="">
-			<div class="col-sm-3 nopadding thumb">
-				<div class="desc">2014</div><!-- desc -->
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp-thumb.jpg" alt="">
-			</div><!-- thumb -->
-		</a>
-		<a href="">
-			<div class="col-sm-3 nopadding thumb">
-				<div class="desc">2013</div><!-- desc -->
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp-thumb.jpg" alt="">
-			</div><!-- thumb -->
-		</a>
-		<a href="">
-			<div class="col-sm-3 nopadding thumb">
-				<div class="desc">2012</div><!-- desc -->
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp-thumb.jpg" alt="">
-			</div><!-- thumb -->
-		</a>
-		<a href="">
-			<div class="col-sm-3 nopadding thumb">
-				<div class="desc">2011</div><!-- desc -->
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp-thumb.jpg" alt="">
-			</div><!-- thumb -->
-		</a>
-		<a href="">
-			<div class="col-sm-3 nopadding thumb">
-				<div class="desc">2010</div><!-- desc -->
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp-thumb.jpg" alt="">
-			</div><!-- thumb -->
-		</a>
-		<a href="">
-			<div class="col-sm-3 nopadding thumb">
-				<div class="desc">2009</div><!-- desc -->
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp-thumb.jpg" alt="">
-			</div><!-- thumb -->
-		</a>
-
 	</div><!-- loop-acervo -->
 
 <?php
