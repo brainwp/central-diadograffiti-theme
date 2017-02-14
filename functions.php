@@ -307,7 +307,7 @@ if ( is_woocommerce_activated() ) {
 /**
  * Load customizer fields + Kirki
  */
-//require_once get_template_directory() . '/inc/customizer.php';
+require_once get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Advanced Custom Fields
