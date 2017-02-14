@@ -4,7 +4,7 @@
 
 * [Ação Educativa](http://acaoeducativa.org.br/)
 * [Brasa](http://brasa.art.br/)
-* [WordPress](https://br.wordpress.com/)
+* [WordPress](https://br.wordpress.org/)
 
 ## WordPress Theme (MU) ##
 
