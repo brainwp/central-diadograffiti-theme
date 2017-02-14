@@ -244,7 +244,7 @@ body.home .slider .col-md-12 {
 
 /* Footer */
 #footer{
-	background:url( '../images/bg-footer.jpg' ) top center no-repeat;
+	/*background:url( '../images/bg-footer.jpg' ) top center no-repeat;*/
 	background-size:cover;
 	bottom: 0;
 	position: relative;
