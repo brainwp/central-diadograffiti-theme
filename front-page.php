@@ -18,8 +18,8 @@ get_header(); ?>
 		<div class="desc">
 			<h1><?php echo bloginfo( 'title' ); ?></h1>
 			<?php if ( $desc = get_theme_mod( 'desc' ) ): ?>
-				<span><?php echo $desc; ?></span>
-			<?php endif ?>
+				<span><?php echo apply_filters( 'the_content', $desc ); ?></span>
+			<?php endif; ?>
 		</div><!-- desc -->
 	</main><!-- #content -->
 </div><!-- .container -->
@@ -61,12 +61,12 @@ get_header(); ?>
 					continue;
 				}
 				?>
-				<a href="<?php echo get_home_url();?>">
+				<a href="<?php echo esc_url( get_home_url() ); ?>">
 					<div class="col-sm-3 nopadding thumb">
 						<div class="desc">
-							<?php echo $desc;?>
+							<?php echo apply_filters( 'the_content', $desc ); ?>
 						</div><!-- desc -->
-						<img src="<?php echo $image;?>" alt="<?php get_bloginfo( 'name' );?>">
+						<img src="<?php echo esc_url( $image ); ?>" alt="<?php get_bloginfo( 'name' ); ?>">
 					</div><!-- thumb -->
 				</a>
 			<?php endforeach; restore_current_blog();
