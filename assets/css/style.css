@@ -191,6 +191,13 @@ body.home .desc span {
 	font-weight: 400;
 }
 
+/* Embed Mapa */
+body.home .embed-mapa {
+	height: 800px;
+	margin-bottom: 50px;
+	margin-top: 70px;
+	width: 100%;
+}
 /* Slider */
 body.home .slider {
 	margin-bottom: 30px;

@@ -24,11 +24,15 @@ get_header(); ?>
 	</main><!-- #content -->
 </div><!-- .container -->
 
-	<?php if ( $slider = get_theme_mod( 'slider' ) ): ?>
-		<div class="slider col-sm-12 nopadding">
-			<?php echo do_shortcode( $slider ); ?>
-		</div><!-- slider -->
-	<?php endif; ?>
+<?php if ( $embed = get_theme_mod( 'embed_map' ) ): ?>
+	<embed class="embed-mapa" src="<?php echo esc_url( $embed ); ?>">
+<?php endif; ?>
+
+<?php if ( $slider = get_theme_mod( 'slider' ) ): ?>
+	<div class="slider col-sm-12 nopadding">
+		<?php echo do_shortcode( $slider ); ?>
+	</div><!-- slider -->
+<?php endif; ?>
 
 <div class="container">
 	<div class="col-sm-12 loop-acervo">

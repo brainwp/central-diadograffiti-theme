@@ -61,6 +61,14 @@ function brasa_kirki_fields( $fields ) {
 	);
 	$fields[] = array(
 		'type'     => 'text',
+		'setting'  => 'embed_map',
+		'label'    => __( 'URL to embed the map', 'odin' ),
+		'section'  => 'home',
+		'description'  => '../url/do/mapa/?by_year=' . date( 'Y' ),
+		'priority' => 1,
+	);
+	$fields[] = array(
+		'type'     => 'text',
 		'setting'  => 'slider',
 		'label'    => __( 'Shortcode of Brasa Slider', 'odin' ),
 		'section'  => 'home',
