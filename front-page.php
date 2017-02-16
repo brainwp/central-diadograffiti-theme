@@ -46,9 +46,9 @@ get_header(); ?>
 
 		// The Loop
 		if ( $site_query ) :
-			$current_site = get_current_blog_id();
+			$current_site_id = get_current_blog_id();
 			foreach ( $site_query->get_sites() as $site ) :
-				if ( $site->blog_id == $current_site ) {
+				if ( $site->blog_id == $current_site_id ) {
 					continue;
 				}
 				$desc = $site->path;
