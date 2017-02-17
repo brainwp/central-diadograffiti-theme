@@ -15,6 +15,7 @@ Author URI: http://wpod.in/#colaboradores
 body {
 	background: url( '../images/bg-home.jpg' ) center top fixed;
 	font-family: 'Source Sans Pro', sans-serif;
+	margin-bottom: 0;
 	margin-top: 110px;
 }
 .nopadding {
@@ -211,6 +212,7 @@ body.home .slider .col-md-12 {
 /* Loop Acervo Digital */
 .loop-acervo {
 	text-align: center;
+	padding-bottom: 30px;
 }
 .loop-acervo h1 {
 	font-size: 4em;
@@ -250,10 +252,10 @@ body.home .slider .col-md-12 {
 }
 
 /* Footer */
-#footer{
-	/*background:url( '../images/bg-footer.jpg' ) top center no-repeat;*/
-	background-size:cover;
+#footer {
+	background-size: cover;
 	bottom: 0;
+	height: auto;
 	position: relative;
 	z-index: -14;
 	width: 100%;
@@ -265,7 +267,7 @@ body.home .slider .col-md-12 {
 	transition: all 200ms ease-in-out;
 }
 #footer .pull-left {
-	margin-top: 50px;
+	margin-top: 60px;
 }
 #footer .logos {
 	background: url( '../images/regua-logos-2016.png' ) center center no-repeat;
