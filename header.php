@@ -33,13 +33,9 @@
 			<div class="container">
 				<div class="header-image">
 					<?php
-					$logo = get_theme_mod( 'logo' );
-					if ( ! empty( $logo ) ) :
-					?>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-							<img src="<?php echo esc_url( $logo ); ?>" alt="<?php echo bloginfo( 'name' ); ?>" />
-						</a>
-					<?php endif; ?>
+					if ( function_exists( 'the_custom_logo' ) ) {
+						the_custom_logo();
+					} ?>
 				</div><!-- .header-image -->
 
 			<div id="main-navigation" class="navbar navbar-default">

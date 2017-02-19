@@ -83,6 +83,17 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		add_theme_support( 'automatic-feed-links' );
 
 		/**
+		 * Add custom logo.
+		 */
+		add_theme_support( 'custom-logo', array(
+			'height'      => 130,
+			'width'       => 220,
+			'flex-height' => true,
+			'flex-width'  => true,
+			'header-text' => array( 'site-title', 'site-description' ),
+		) );
+
+		/**
 		 * Support Custom Header.
 		 */
 		$default = array(

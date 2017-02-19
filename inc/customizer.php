@@ -28,14 +28,6 @@ add_action( 'customize_register', 'brasa_kirki_add_panel' );
  */
 function brasa_kirki_fields( $fields ) {
 	$fields[] = array(
-		'type'     => 'image',
-		'setting'  => 'logo',
-		'label'    => __( 'Image Site Logo', 'odin' ),
-		'section'  => 'visual',
-		'default'  => '',
-		'priority' => 1,
-	);
-	$fields[] = array(
 		'type'     => 'text',
 		'setting'  => 'featured_btn_txt',
 		'label'    => __( 'Texto do botão em destaque no menu', 'odin' ),
