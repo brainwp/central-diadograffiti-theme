@@ -73,7 +73,7 @@ get_header(); ?>
 						<img src="<?php echo esc_url( $image ); ?>" alt="<?php get_bloginfo( 'name' ); ?>">
 					</div><!-- thumb -->
 				</a>
-			<?php endforeach; restore_current_blog();
+			<?php endforeach; switch_to_blog( $current_site_id );
 		endif;
 		?>
 	</div><!-- loop-acervo -->
