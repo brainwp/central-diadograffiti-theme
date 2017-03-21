@@ -55,11 +55,8 @@ get_header(); ?>
 				if ( $site->blog_id == $current_site_id ) {
 					continue;
 				}
-				$desc = $site->path;
-				$desc = substr_replace( $desc, '', -1 );
-				$desc = explode( '/', $desc );
-				$desc = end( $desc );
 				switch_to_blog( $site->blog_id );
+				$desc = diadograffiti_get_site_title_by_url( get_home_url() );
 				$image = get_theme_mod( 'home_site_image_mu', false );
 				if ( ! $image ) {
 					continue;

@@ -103,3 +103,26 @@ if ( ! function_exists( 'odin_the_custom_logo' ) ) {
 		}
 	}
 }
+/**
+ * Get site title in home_url (subdomain or path)
+ * @param string $url
+ * @return string
+ */
+function diadograffiti_get_site_title_by_url( $url ) {
+	$title = '';
+	if ( defined( 'SUBDOMAIN_INSTALL' ) ) {
+		if( SUBDOMAIN_INSTALL ) {
+        	$title = explode( '.', $url );
+        	$title = str_replace( array( 'https://', 'http://' ), '', $title[0] );
+		} else {
+			$url = substr_replace( $url, '', -1 );
+			$url = explode( '/', $url );
+			$title = end( $url );
+    	}
+    } else {
+		$url = substr_replace( $url, '', -1 );
+		$url = explode( '/', $url );
+		$title = end( $url );
+    }
+    return $title;
+}
