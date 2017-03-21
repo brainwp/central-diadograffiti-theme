@@ -126,6 +126,8 @@ function diadograffiti_get_site_title_by_url( $url ) {
     }
     return $title;
 }
+
+
 /**
  * Get wp_site_query order
  * @return string
