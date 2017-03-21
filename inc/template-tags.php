@@ -126,3 +126,18 @@ function diadograffiti_get_site_title_by_url( $url ) {
     }
     return $title;
 }
+/**
+ * Get wp_site_query order
+ * @return string
+ */
+function diadograffiti_get_site_query_order() {
+	if ( defined( 'SUBDOMAIN_INSTALL') ) {
+		if ( SUBDOMAIN_INSTALL ) {
+			return 'domain';
+		} else {
+			return 'path';
+		}
+	} else {
+		return 'path';
+	}
+}

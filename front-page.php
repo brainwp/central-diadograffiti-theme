@@ -42,7 +42,7 @@ get_header(); ?>
 		// WP_Site_Query arguments
 		$args = array (
 			'order'             => 'DESC',
-			'orderby'           => 'path',
+			'orderby'           => diadograffiti_get_site_query_order(),
 		);
 
 		// The Site Query
