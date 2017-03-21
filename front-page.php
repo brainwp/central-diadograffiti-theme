@@ -30,7 +30,8 @@ get_header(); ?>
 
 <?php if ( $slider = get_theme_mod( 'slider' ) ): ?>
 	<div class="slider col-sm-12 nopadding">
-		<?php echo do_shortcode( $slider ); ?>
+
+		<?php echo do_shortcode( html_entity_decode( $slider ) ); ?>
 	</div><!-- slider -->
 <?php endif; ?>
 
